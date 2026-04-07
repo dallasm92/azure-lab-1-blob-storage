@@ -59,19 +59,17 @@ This lab walks through Azure Blob Storage setup and validation for a simple obje
 | 14 | `images/14-storage-account-deployment-toast.png` | Deployment-in-progress toast for the storage account. |
 | 15 | `images/15-storage-account-deployment-in-progress.png` | Deployment blade showing the storage account deployment in progress. |
 | 16 | `images/16-storage-account-deployment-succeeded.png` | Deployment succeeded confirmation for `dallasstoragelab01`. |
-| 17 | `images/17-storage-account-deployment-complete-detail.png` | Additional deployment completion view retained as supporting evidence. |
 | 18 | `images/18-storage-account-overview.png` | Storage account overview showing the resource group, region, performance tier, and account kind. |
 | 19 | `images/19-container-create-dialog.png` | New container dialog with `labfiles` entered. |
 | 20 | `images/20-container-created-list.png` | Container list showing `labfiles` created successfully. |
 | 21 | `images/21-container-overview.png` | `labfiles` container overview before blob-level work. |
 | 22 | `images/22-blob-overview-selected-file.png` | Blob view showing uploaded files and the selected `sample txt file.txt` object. |
 | 23 | `images/23-portal-download-complete.png` | Browser download completion indicator for the sample text file. |
-| 24 | `images/24-container-overview-post-download.png` | Container overview after direct download validation. |
 | 25 | `images/25-container-sas-form.png` | Container-level SAS form using account key signing. |
 | 26 | `images/26-container-sas-form-detail.png` | Additional container SAS configuration detail. |
-| 27 | `images/27-container-sas-authentication-failed-sensitive.png` | Failed container-level SAS attempt showing `AuthenticationFailed`. Sensitive because the browser address bar includes a SAS URL. |
+| 27 | `images/27-container-sas-authentication-failed-sensitive.png` | Failed container-level SAS attempt showing `AuthenticationFailed`. The original capture exposed a SAS URL, and the repository copy is redacted. |
 | 28 | `images/28-blob-sas-form.png` | Blob-level SAS generation form for `sample txt file.txt`. |
-| 29 | `images/29-blob-sas-direct-download-sensitive.png` | Successful direct browser access to `sample txt file.txt` using a blob-level SAS URL. Sensitive because the browser address bar includes a SAS URL. |
+| 29 | `images/29-blob-sas-direct-download-sensitive.png` | Successful direct browser access to `sample txt file.txt` using a blob-level SAS URL. The original capture exposed a SAS URL, and the repository copy is redacted. |
 | 30 | `images/30-lifecycle-management-overview.png` | Lifecycle management page before any rule is added. |
 | 31 | `images/31-lifecycle-rule-details.png` | Rule details step with `move-old-blobs` defined for all blobs. |
 | 32 | `images/32-lifecycle-rule-base-blobs-initial.png` | Base blobs rule step before the final aging threshold and action are fully set. |
@@ -83,7 +81,14 @@ This lab walks through Azure Blob Storage setup and validation for a simple obje
 - The uploaded files are confirmed from the storage container view, not inferred from file names outside the screenshots.
 - The SAS troubleshooting sequence is confirmed by both the Azure portal and the browser error screenshot.
 - The lifecycle rule action and threshold are confirmed by the final rule configuration screenshot.
-- `TODO`: if you want a tighter public evidence set, decide whether to keep both deployment completion screenshots (`16` and `17`) and both post-download container screenshots (`21` and `24`), or trim the duplicates.
+- The final repo intentionally trims duplicate completion evidence to keep the screenshot set concise.
+
+## Trimmed Evidence
+
+- `images/17-storage-account-deployment-complete-detail.png`
+  - removed because `images/16-storage-account-deployment-succeeded.png` already captures the same milestone clearly
+- `images/24-container-overview-post-download.png`
+  - removed because `images/21-container-overview.png`, `images/22-blob-overview-selected-file.png`, and `images/23-portal-download-complete.png` already cover the relevant workflow
 
 ## Portfolio Framing
 
