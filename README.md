@@ -1,6 +1,6 @@
-# Azure Lab 1: Blob Storage
+# Azure Lab 1: Secure Cloud File Share with Blob Storage
 
-This lab documents a basic Azure Blob Storage workflow from resource creation through object access and lifecycle management. The evidence set shows the full sequence for creating a resource group, deploying a storage account, creating a private container, uploading files, validating direct blob access, troubleshooting a failed container-level SAS, generating a working blob-level SAS, and configuring lifecycle management to move older blobs to the Cool tier.
+This lab documents the first free-first Azure storage workflow I built for portfolio use. The evidence set shows the full sequence for creating a resource group, deploying a storage account, creating a private container, uploading files, validating direct blob access, troubleshooting a failed container-level SAS attempt, generating a working blob-level SAS, and configuring lifecycle management to move older blobs to the Cool tier.
 
 ## Lab Scope
 
@@ -21,6 +21,7 @@ This lab documents a basic Azure Blob Storage workflow from resource creation th
 
 - Azure resource group creation and validation
 - Azure Blob Storage account deployment
+- Blob Storage / Data Lake Gen2-capable account selection through Azure Storage Center
 - Private container creation
 - Blob upload and portal-side object validation
 - Direct browser download validation
@@ -39,6 +40,15 @@ This lab documents a basic Azure Blob Storage workflow from resource creation th
 - Captured a failed container-level SAS attempt for troubleshooting evidence.
 - Generated a successful blob-level SAS and verified access in the browser.
 - Created a lifecycle policy that moves old blobs to the Cool tier after 30 days.
+
+## Accuracy Notes
+
+- The storage account flow started from Azure Storage Center and used the Azure Blob Storage / Data Lake Storage Gen2 path shown in the screenshots.
+- The SAS troubleshooting mattered because the first validation was attempted at the container level, while the successful delegated-access test was generated and validated against a specific blob.
+- The lifecycle rule was intentionally kept simple for a first lab:
+  - move base blobs to the Cool tier
+  - 30 days after last modification
+  - no delete action
 
 ## Evidence Map
 
