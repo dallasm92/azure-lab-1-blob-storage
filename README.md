@@ -35,6 +35,16 @@ Deploy a basic Azure storage workflow by creating a resource group, provisioning
 
 This lab is the first Azure portfolio workflow in the series. It establishes the storage and cost-awareness foundation before the later networking, RBAC, and VM labs.
 
+## Hiring Manager Quick View
+
+| Review area | Evidence |
+|---|---|
+| Azure fundamentals | Resource group, storage account, private container, uploaded blobs |
+| Access troubleshooting | Failed container-level SAS followed by successful blob-level SAS validation |
+| Security awareness | Private container, SAS treated as sensitive, redacted URL screenshots |
+| Cost awareness | Lifecycle rule moving blobs to Cool storage after 30 days |
+| Documentation quality | Screenshot-to-step evidence map and cleanup boundary clearly stated |
+
 ## Steps Performed
 
 1. Created the resource group `rg-azure-lab-storage`.
@@ -111,7 +121,7 @@ This lab is the first Azure portfolio workflow in the series. It establishes the
 - This lab stayed within a small storage-only footprint and avoided compute resources entirely.
 - The lifecycle rule was configured for Cool-tier transition only, not deletion, so the evidence remained easy to review without making the lab look destructive.
 - SAS was kept short-lived and treated as a sensitive delegated-access mechanism.
-- `TODO`: Confirm whether `rg-azure-lab-storage` was deleted after the lab if you want the repo to claim full cleanup completion.
+- Final resource deletion is not claimed in this public writeup because the current evidence set does not include a cleanup screenshot. The repo documents cost-control choices that are visible in the captured workflow.
 
 ## Repository Notes
 
