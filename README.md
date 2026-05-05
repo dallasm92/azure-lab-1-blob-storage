@@ -1,5 +1,8 @@
 # Azure Lab 1: Secure Cloud File Share with Blob Storage
 
+Social preview asset:
+- [assets/social-preview.png](assets/social-preview.png)
+
 ## Objective
 
 Deploy a basic Azure storage workflow by creating a resource group, provisioning a storage account, creating a private blob container, uploading files, validating direct blob access, troubleshooting SAS access, and applying a simple lifecycle rule for cost-aware storage management.
